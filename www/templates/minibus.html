@@ -1,0 +1,39 @@
+<ion-view title="minibus" id="bus">
+	<ion-content has-tabs="true">
+	<section class="flex column" style="justify-content:center">
+		<div class="card" style="text-align:center">
+			<div class="item item-text-wrap">
+				<p style="font-weight:800"><span class="stationTitle">Salida</span> Parodi y Haedo</p>
+				<p class="horario"><i class="ion-clock" style="color:black;margin-right:1em"></i>14 | 14.30 | 15 | 16 | 16.30 | 17 </p>
+				<span ng-repeat="i in salida1" class="direccion"><p>{{i}}<hr> </p></span>
+			</div>
+		</div>
+		<div class="card" style="text-align:center;">
+			<div class="item item-text-wrap">
+				<p style="font-weight:800"><span class="stationTitle">Salida</span> Estacion San Isidro</p>
+				<p class="horario"><i class="ion-clock" style="color:black;margin-right:1em"></i>14.30 | 15 | 16 | 16.30 | 17 | 17.30</p>
+				<span ng-repeat="i in salida2"><p class="direccion" >{{i}}<hr></p></span>
+			</div>
+		</div>
+	</section>
+	  <section class="mapWrap bus">
+		<ui-gmap-google-map 
+				center='map.center' 
+				zoom='map.zoom'>
+				    <ui-gmap-markers models="markers" coords="'self'" icon="'icon'">
+				        <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+				            <div>
+				                <h1 ng-non-bindable style="text-transform:capitalize">{{label}}</h1>
+				                <a href="#/tab/talleres">Ir a Talleres</a>
+				            </div>
+				        </ui-gmap-windows>
+				    </ui-gmap-markers>
+			<!-- html comment 
+				<ui-gmap-polyline 
+				ng-repeat="p in polylines" path="p.path" visible='p.visible'	stroke="p.stroke">
+				</ui-gmap-polyline>
+	-->	
+		</ui-gmap-google-map>
+		</section>
+	</ion-content>
+</ion-view title>

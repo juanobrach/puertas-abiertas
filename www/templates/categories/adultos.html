@@ -1,0 +1,23 @@
+      <ion-view view-title="Gastronomía">
+        <ion-content class="padding" has-tabs="true">
+          <ion-list>
+          <ion-item ng-repeat="item in items |filter:{categoria:'adultos'}">
+            <a ui-sref="tab.taller({tallerName:'{{item.taller}}'})">
+                <div class="flex row">
+                    <p style="
+                      border-radius:25px;
+                      height:25px;
+                      background:red;
+                      width:25px;
+                      line-height:25px;
+                      text-align:center;
+                      color:white">{{item.tallerNumero}}</p>
+                    <p style="text-transform:uppercase;font-weight:bold;margin-left:1em">{{item.taller}}</p>
+                </div>
+                <p> {{item.nombre}}</p>
+                <p>{{item.descripccion}}</p>
+            </a>
+          </ion-item>
+        </ion-list>
+        </ion-content>
+      </ion-view>

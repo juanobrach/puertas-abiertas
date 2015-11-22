@@ -1,0 +1,31 @@
+<ion-view title="Agenda" id="agenda">
+    <ion-content>
+        <ul ng-repeat="item in list | orderBy:'horario'" ng-if="item.fecha >= dateToday"><!-- remember add |filter: -->
+            <li class="item flex row" style="justify-content:space-between">
+               <a ui-sref="tab.taller({tallerName:'{{item.taller}}', tallerNumber:'{{item.tallerNumero}}'})" class="flex row">
+
+                        <span style="flex:1">
+                            <p style="font-size:100%" class="dia">{{item.dia}}</p>
+                            <p class="actividad">{{item.nombre}}</p>
+                            <p class="description">{{item.descripccion |limitTo:60}}</p>
+                            <i class="ion-clock" style="color:red"></i>{{item.horario}}
+                        </span>
+                        <span class="flex column">
+                        <p style="align-self:flex-end;
+                                  border-radius:2em;
+                                  color:white;
+                                  background-color:red;
+                                  width:2em;
+                                  height:2em;
+                                  line-height: 2em;
+                                  text-align: center;
+                                  "
+                        >{{item.tallerNumero}}
+                        </p>
+                      <img src="./img/category_icons/{{item.categoria}}.png" style="width:70%;align-self:flex-end">
+                      </span>
+                </a>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view title>

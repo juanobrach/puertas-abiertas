@@ -1,0 +1,16 @@
+{
+  "name": "puertasAbiertas",
+  "version": "0.0.0",
+  "homepage": "https://github.com/driftyco/ionic-angular-cordova-seed",
+  "authors": [
+    "Juan Obrach <juanobrach@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

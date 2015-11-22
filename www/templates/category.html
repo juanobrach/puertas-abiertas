@@ -1,0 +1,25 @@
+      <ion-view title="{{categoryName}}">
+        <ion-content class="padding" has-tabs="true" id="category">
+          <ion-list>
+          <ion-item ng-repeat="item in items |filter:categoryUrl">
+	            <a ui-sref="tab.taller({
+            	tallerName:'{{item.taller}}',tallerNumber:'{{item.tallerNumero}}'
+            })">
+                <div class="flex column center">
+                    <p style="
+                      border-radius:25px;
+                      height:25px;
+                      background:red;
+                      width:25px;
+                      line-height:25px;
+                      text-align:center;
+                      color:white"class="numero">{{item.tallerNumero}}</p>
+                    <p class="taller">{{item.taller}}</p>
+                   <p class="details"> {{item.nombre}}</p>
+                <p class="details">{{item.detalles}}</p>
+                </div>
+            </a>
+          </ion-item>
+        </ion-list>
+        </ion-content>
+      </ion-view>

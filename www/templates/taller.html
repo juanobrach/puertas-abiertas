@@ -1,0 +1,39 @@
+<ion-view title="{{tallerNumber}}- {{tallerName}}">
+  <ion-content has-tabs="true" id="tallerPage">
+  			<!-- START MAP SECTTION -->		
+  			<section class="mapWrap tallerMap">
+				<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+				    <ui-gmap-markers models="markers" coords="'self'" icon="'icon'">
+				        <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+				            <div>
+				                <h1 ng-non-bindable style="text-transform:capitalize">{{label}}</h1>
+				            </div>
+				        </ui-gmap-windows>
+				    </ui-gmap-markers>
+				</ui-gmap-google-map>
+			</section><!-- END MAP SECTTION -->
+<span >
+
+</span>
+<section class="margin-top:2em" id="actividades">
+    <div class="list">
+        <div class="item item-divider">
+            <p>Actividades</p>
+        </div>
+        <ul ng-repeat="act in actividades " ng-if="act.taller == tallerName ">
+            <li class="item flex column center">
+            		<img src="./img/category_icons/{{act.categoria}}.png" class="categoryIcon">
+           			<p class="nombre">{{act.nombre}}</p>
+           			<p>{{act.descripccion}}</p>
+           			<span class="flex row date center">
+            				<p><i class="ion-clock"></i>{{act.hora}}</p>
+            				<p><i class="ion-android-calendar" style="color:black"></i>{{act.dia}}</p>
+           			</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+  </ion-content>
+</ion-view title>

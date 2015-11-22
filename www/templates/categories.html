@@ -1,0 +1,18 @@
+<!--
+  This template loads for the 'tab.adopt' state (app.js)
+-->
+<ion-view title="CATEGORIAS" id="categories">
+  <ion-content has-tabs="true">
+     <ul ng-repeat="category in categoriesList" class="list">
+       <li>
+       <a ui-sref="tab.category({
+                                  categoryName:'{{category.name}}',
+                                  categoryUrl:'{{category.url}}'
+                                })" class="item flex row" style="text-align:center;">
+        <img src="{{category.thumb}}" style="height:60px">
+         <h2 class="name">{{category.name}}</h2>
+       </a>
+              </li>
+     </ul>
+  </ion-content>
+</ion-view title>

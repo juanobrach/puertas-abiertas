@@ -1,0 +1,19 @@
+<ion-view title="Ciclo de Veladas Valientes" id="veladas">
+  <ion-content has-tabs="true">
+  	<div class="card">
+	  	 <p class="cardTitle">
+	  	 	Temas que ocupan y preocupan al campo del arte, sus sistemas de legitimación y formación de artistas y el mercado del arte.
+	  	 </p>
+  	 <hr>
+      <ul ng-repeat="t in talleres">
+      	  <div class="item item-text-wrap">
+      	  	<a ui-sref="tab.taller({tallerName:'{{t.taller}}', tallerNumber:'{{t.numero}}' })">
+			   	<p class="eventTitle">{{t.actividad}}</p>
+			   	<hr>
+			   	<p>{{t.details}}</p>
+		   	</a>
+		  </div>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view title

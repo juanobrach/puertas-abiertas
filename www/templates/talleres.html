@@ -1,0 +1,22 @@
+<ion-view title="talleres">
+	<ion-content id="talleres">
+		<ul ng-repeat = "taller in talleres | orderBy:'numero'" id="talleresList" >
+			<li>
+				<a ui-sref="tab.taller({tallerName:'{{taller.taller}}', tallerNumber:'{{taller.numero}}'})" 
+					class="item flex row" >
+					<p class="numero">{{taller.numero}}</p>
+					<div class="flex column">
+						<p class="tallerName">{{taller.taller}}</p>
+						<section class="flex row">
+							<i class="ion-android-pin" style="margin-right:5px"></i>
+							<p>{{taller.dir}}</p>	
+						</section>
+
+					</div>
+						
+				</a>
+			</li>
+		</ul>
+
+	</ion-content>
+</ion-view>

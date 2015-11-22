@@ -1,0 +1,25 @@
+	<ion-view title="Mapa">
+		<ion-content>
+			<section class="mapWrap allMap">
+				<ui-gmap-google-map 
+				center='map.center' 
+				zoom='map.zoom'
+				data-tap-disabled="true"
+				>
+				    <ui-gmap-markers models="markers" coords="'self'" icon="'icon'" data-tap-disabled="true">
+				        <ui-gmap-windows  options="windowOptions" ng-cloak data-tap-disabled="true">
+				            <div>
+				                <h1 ng-non-bindable style="text-transform:capitalize">{{label}}</h1>
+				                <a href="#/tab/talleres">Ir a Talleres</a>
+				            </div>
+				        </ui-gmap-windows>
+				    </ui-gmap-markers>
+			<!-- html comment 
+				<ui-gmap-polyline 
+				ng-repeat="p in polylines" path="p.path" visible='p.visible'	stroke="p.stroke">
+				</ui-gmap-polyline>
+	-->	
+				</ui-gmap-google-map>
+			</section>
+		</ion-content>
+	</ion-view>
